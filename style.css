@@ -1,0 +1,374 @@
+/* @color_red: #960010;
+@color_aubergine: #D4D3DC; */
+:root {
+  --color_theme: #006699 ;  /* #5E2750; */
+  --color_link: #038dba ; /*#212E53 ; */ /* #1D5E5E;*/
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  /* padding: 0; */
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes fadeout {
+  from {}
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+*{font-family: 'Fira Sans', sans-serif;}
+.bold{font-weight:bold;}
+.italic{font-style: italic;}
+.oblique{font-style: oblique;}
+
+
+body {
+  /* font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+  /* -webkit-font-smoothing: antialiased; */
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: var(--color_theme);
+  background-color: var(--color_theme);
+  padding: 1rem 0;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+header .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div#title>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header img {
+  height: 5rem;
+  border-radius: 2.5rem;
+  margin-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  header img {
+    margin-right: 1rem;
+  }
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  line-height: 1.5;
+  margin: 0;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    line-height: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header #menu {
+    position: fixed;
+    top: 0;
+  }
+
+  header #menu nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--color_theme);
+    z-index: 9999;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  header #menu:target nav {
+    transform: scaleX(1);
+  }
+
+  header #menu:target #menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.4;
+    z-index: 9998;
+  }
+}
+
+header #menu h2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header #menu h2 {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+header span {
+  flex: 10000 10000;
+}
+
+header #to_menu {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-right: 1rem;
+  display: none;
+}
+
+header #to_menu:hover {
+  box-shadow: 0 0 1rem white;
+  text-shadow: 0 0 2px white;
+}
+
+header #to_menu div {
+  width: 1.275rem;
+  height: 0.15rem;
+  background-color: white;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+  header #to_menu {
+    display: block;
+  }
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-shadow: 0 0 3px grey;
+}
+
+header li {
+  float: left;
+  margin-right: 2rem;
+  list-style-type: none;
+}
+
+@media (max-width: 768px) {
+  header li {
+    float: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul {
+    margin-bottom: 1rem;
+    /* same as li's margins */
+  }
+}
+
+@media (max-width: 768px) {
+  header li a {
+    display: block;
+    font-weight: bold;
+    padding: 1rem 1rem;
+  }
+}
+
+#to_top {
+  background: white; /*var(--color_theme);*/
+  padding: .5rem 1rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  /* display: none;  */
+}
+
+#to_top:hover {
+  box-shadow: 0 0 1rem white;
+  text-shadow: 0 0 4px white;
+}
+
+@media (max-width: 768px) {
+  #to_top {
+    display: block;
+  }
+}
+
+footer {
+  /**/
+  background: var(--color_theme);
+  padding: 1rem 0;
+  color: white;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+#page-body {
+  line-height: 1.2; }
+  #page-body a {
+    text-decoration: none;
+    color: var(--color_link) ;
+    font-weight: bold;
+  }
+    #page-body a:visited {
+      /* color: var(--color_link); */
+    }
+    #page-body a:hover {
+      /* color: var(--color_link); */
+      text-shadow: 0 0 .5px grey;
+
+    }
+  #page-body p {
+    margin-top: 1rem; }
+  #page-body li {
+    margin-top: .5rem;
+    margin-left: 1.25rem; }
+    #page-body li::before {
+      content: ">";
+      margin-left: -1.25rem;
+      /* Compensate margin-left of li */
+      margin-right: 0.65rem;
+      color:  var(--color_theme); }
+  #page-body h2, #body h3, #body h4, #body h5, #body h6 {
+    font-weight: bolder;
+    margin-top: 2rem; }
+  #page-body h2 {
+    font-size: 1.8rem; }
+  #page-body h3 {
+    font-size: 1.5rem; }
+  #page-body h4 {
+    font-size: 1.2rem; }
+
+
+
+/*-----------------------------------------------*/
+/* Sticky footer */
+/* https://developer.mozilla.org/fr/docs/Web/CSS/Layout_cookbook/Sticky_footers */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  /* background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif; */
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  /* box-sizing: inherit; */
+}
+
+section {
+  /* height: 100% */
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+#page-header,
+#page-footer {
+  /* background-color: rgb(75, 70, 74);*/
+  /*color: #fff; */
+  padding: 20px;
+}
+
+#page-body {
+  padding: 20px;
+}
+
+/*-----------------------------------------------*/
