@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>dl SBML models archive from Biomodels</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Athénaïs Vaginay">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--<link rel="stylesheet" type="text/css" href="../style.css">-->
+</head>
+
+<body>
+
+    <main id="page-body" class="content" style="max-width: 768px;margin: auto;;">
+
+        <h1>An archive of SBML models from Biomodels</h1>
+
+        <p>
+            The <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a>
+            is the de facto standard to encode biological and biomedical models.
+            As it turns out, I worked quite a bit with models encoded in SBML.
+            For example, part of the experiments I ran for my PhD thesis consists in
+            converting reaction-based models (encoded in SBML) into Boolean networks (encoded in the bnet format).
+        </p>
+
+        <p>
+            My dataset is made of SBML models stored in the curated branch of the repository BioModels.
+            At the time of the experiments, I used the latest archive available at that time
+            on the ftp of ebi
+            (<a href="ftp.sra.ebi.ac.uk/pub/databases/biomodels/releases/">release r31 from 2017-06-26</a>).
+        </p>
+
+        <p>
+            Since then, a new archive has beed released
+            (from <a href="http://ftp.sra.ebi.ac.uk/pub/databases/biomodels/releases/2023-09-13/">2023-09-13</a>)
+            but it seems empty (??? oO).
+        </p>
+
+        <p>
+            I wanted a method to update my dataset whenever I am pleased,
+            as well as to retrieve a bunch of info available on BioModels website
+            (such as the figures used for the model curation).
+            I decided to go with a custom python script that scraps the website of Biomodels.
+        </p>
+
+        <p>
+            ---updated on 20240116---
+            <br/>
+            You can
+                <a href="biomodels-sbml_script.zip">
+                   **dl my script**
+                </a>
+            along with
+            <a href="biomodels-sbml_result.zip"> **the resulting archive**</a> containing all the <b>1059 sbml files</b> it downloads,
+            from the <b>curated branch</b> of BioModels.
+            Note that in BioModels, the filenames are not standardised
+            and that I renamed all the models with the same pattern :
+            BIOMD_ID.sbml.
+            Also, my script relies on a tons of hacks to manage a bunch of exceptions inherent to web scrapping.
+            Feel free to reach out and propose changes.
+            <br/>
+            Anyway. Enjoy !
+        </p>
+
+        <p>
+            Alternative programming methods to dive into BioModels
+            (which I did not used, for various reasons):
+            <ul>
+                <li>
+                    The <a href = "https://www.ebi.ac.uk/biomodels/docs/" > official REST API of Biomodels</a>
+                    and more specifically,
+                    the <a href = "<a>https://bitbucket.org/biomodels/biomodels-resftful-api-client/src/main/">Python implementation</a>
+                </li>
+                <li>
+                    A python package called biomodels and available
+                    <a href="https://github.com/maurosilber/biomodels"> on Github </a>
+                </li>
+            </ul>
+        </p>
+    </main>
+
+
+</body>
+</html>
