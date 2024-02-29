@@ -413,7 +413,7 @@ background-color:#f8c91f; height:10px; width:10px; display:inline-block; margin-
 
 li.bibjournal:before,  li.bibconf:before,  li.bibpreprint:before,  li.bibthesis:before {
     content: "■";
-    font-size: 1.5em;
+    font-size: 1em;
       margin-left: -1.25rem;
       /* Compensate margin-left of li */
       margin-right: 0rem;
