@@ -98,7 +98,24 @@
             <a href="R1.04/TP/R1.04_TP3.pdf"> Langage de commandes windows </a> ;
             aidez vous de <a href="https://miashs-www.u-ga.fr/prevert/SpecialiteIHS/Documents/2-SystemeWindowsIC2A.pdf" target="_blank">ce cours</a> ;-)
         </li>
-        <!--TP4- -><li> <a href="R1.04/TP/__.pdf">  </a>  </li> -->
+        <!--TP4--><li> Powershell.
+
+        <br>
+        Powershell est le shell système de Microsoft pour ses socles Windows, *mais* vous pouvez utiliser ce shell Microsoft sous Linux (tous les moyens sont bons pour utiliser Linux encore plus 🐧).
+        Sous Debian/Ubuntu/... :
+        <pre>
+            wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+            sudo dpkg -i packages-microsoft-prod.deb
+            sudo apt-get update
+            sudo apt-get install -y powershell
+            pwsh # ou sudo pwsh si vous voulez les droits administrateur.
+        </pre>
+        <ul>
+            <li> <a target="_blank" href="R1.04/CM/R1.04_simon-vilmin-powershell.pdf">Une intro succincte à powershell</a> </li>
+            <li> <a target="_blank" href="R1.04/TP/R1.04_TP4.pdf">Le sujet de TP</a> </li>
+            <li> <a target="_blank" href="https://learn.microsoft.com/fr-fr/powershell/scripting/overview?view=powershell-7.4">Le tuto de Microsoft</a> </li>
+        </ul>
+    </li>
 
     </ol>
 
