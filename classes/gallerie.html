@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallerie photo -- cours</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Athénaïs Vaginay">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--<link rel="stylesheet" type="text/css" href="../style.css">-->
+    <style>
+    .gallery_row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery_col {
+      /*flex: 50%;*/
+      padding: 5px;
+      flex: 1;
+      transition: transform .2s;
+    }
+    
+    .gallery_col img {
+      object-fit: fill;
+    }
+    
+    .gallery_col img:hover {
+            /*zoom: 1.9;*/
+             transform: scale(2); /* (1.5 = 150%; 3 = 300% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    
+    
+    body {
+    max-width: 50%;
+    margin: auto;
+    }
+    </style>
+</head>
+
+<html>
+
+<body>
+
+    <h1>Gallerire</h1>
+    <div style="height=100px"></div>
+    <!--évite que les images ne déborde lorsqu'on hover-->
+
+      <div class="gallery_row">
+    <div class="gallery_col">
+        <img src="img/vrrp.jpeg" alt="routeurs and switch" style="width:100%">
+      </div>
+      <div class="gallery_col">
+        <img src="img/salle-d-exam.jpeg" alt="salle d'examen" style="width:100%">
+      </div>
+      <div class="gallery_col">
+        <img src="img/cisco-packet-tracer.png" alt="cisco packet tracer" style="width:100%">
+      </div>
+      </div>
+      
+    <div class="gallery_row">
+      <div class="gallery_col">
+        <img src="img/tableau-processus.jpeg" alt="explication sur les processus au tableau" style="width:100%">
+      </div>     
+      <div class="gallery_col">
+        <img src="img/tux-color-css.gif" alt="tux change de couleur en fonction du hovering" style="width:100%">
+      </div>
+      <div class="gallery_col">
+        <img src="img/additionneur-MP.jpeg" alt="shéma additionneur 8 bits" style="width:100%">
+      </div>
+      </div>
+      
+    <div class="gallery_row">
+      <div class="gallery_col">
+        <img src="img/prompts.png" alt="prompts" style="width:100%">
+      </div>
+      <div class="gallery_col">
+        <img src="img/wooclap-patience.jpeg" alt="wooclaps" style="width:100%">
+      </div>
+      <div class="gallery_col">
+        <img src="img/amphi.jpeg" alt="amphi pour les CM" style="width:100%">
+      </div>
+    </div> 
+    
+    <!--Todo : aussi mettre des photos de science, et faire en sorte qu'il y ai un genre de filtre (tag cours, research, etc...) -->
+    
+</body>
+</html>
