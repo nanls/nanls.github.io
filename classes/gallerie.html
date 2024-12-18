@@ -14,29 +14,56 @@
     <style>
     .gallery_row {
       display: flex;
-      align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+
+         padding: 0 4px;
     }
 
     .gallery_col {
-      /*flex: 50%;*/
-      padding: 5px;
-      flex: 1;
-      transition: transform .2s;
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+      /*padding: 5px;*/
+      transition: transform 1s;
     }
-    
+
     .gallery_col img {
-      object-fit: fill;
+      /*object-fit: fill;*/
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
     }
-    
+
     .gallery_col img:hover {
             /*zoom: 1.9;*/
              transform: scale(2); /* (1.5 = 150%; 3 = 300% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+             width:200%;
         }
-    
-    
+
+
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+          .gallery_col {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .gallery_col {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+
+
     body {
-    max-width: 50%;
+    max-width: 750px;
     margin: auto;
     }
     </style>
@@ -46,47 +73,31 @@
 
 <body>
 
-    <h1>Gallerire</h1>
+    <h1 style="text-align=center;">Gallerire</h1>
     <div style="height=100px"></div>
     <!--évite que les images ne déborde lorsqu'on hover-->
 
       <div class="gallery_row">
     <div class="gallery_col">
         <img src="img/vrrp.jpeg" alt="routeurs and switch" style="width:100%">
-      </div>
-      <div class="gallery_col">
         <img src="img/salle-d-exam.jpeg" alt="salle d'examen" style="width:100%">
-      </div>
-      <div class="gallery_col">
         <img src="img/cisco-packet-tracer.png" alt="cisco packet tracer" style="width:100%">
       </div>
-      </div>
-      
-    <div class="gallery_row">
+
       <div class="gallery_col">
         <img src="img/tableau-processus.jpeg" alt="explication sur les processus au tableau" style="width:100%">
-      </div>     
-      <div class="gallery_col">
         <img src="img/tux-color-css.gif" alt="tux change de couleur en fonction du hovering" style="width:100%">
-      </div>
-      <div class="gallery_col">
         <img src="img/additionneur-MP.jpeg" alt="shéma additionneur 8 bits" style="width:100%">
       </div>
-      </div>
-      
-    <div class="gallery_row">
+
       <div class="gallery_col">
         <img src="img/prompts.png" alt="prompts" style="width:100%">
-      </div>
-      <div class="gallery_col">
         <img src="img/wooclap-patience.jpeg" alt="wooclaps" style="width:100%">
-      </div>
-      <div class="gallery_col">
         <img src="img/amphi.jpeg" alt="amphi pour les CM" style="width:100%">
       </div>
-    </div> 
-    
+    </div>
+
     <!--Todo : aussi mettre des photos de science, et faire en sorte qu'il y ai un genre de filtre (tag cours, research, etc...) -->
-    
+
 </body>
 </html>
